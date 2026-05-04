@@ -24,9 +24,9 @@ Inclou tembe un joc de testos doctest.
 
 1. Crear un virtual enviorment:
 
+    ``` bash
     python3 -m venv .venv
     ```
-    ``` bash
 
 2. Activar virtual environment:
 
