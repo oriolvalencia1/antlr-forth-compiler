@@ -1,0 +1,106 @@
+Trying:
+    from forth import interpret
+Expecting nothing
+ok
+Trying:
+    interpret("1 2 + .")
+Expecting:
+    '3'
+ok
+Trying:
+    interpret("10 3 - .")
+Expecting:
+    '7'
+ok
+Trying:
+    interpret("6 7 * .")
+Expecting:
+    '42'
+ok
+Trying:
+    interpret("20 4 / .")
+Expecting:
+    '5.0'
+ok
+Trying:
+    interpret("1 dup .")
+Expecting:
+    '1'
+ok
+Trying:
+    interpret("1 2 swap .")
+Expecting:
+    '1'
+ok
+Trying:
+    interpret("1 2 3 over .")
+Expecting:
+    '2'
+ok
+Trying:
+    interpret("1 2 drop .")
+Expecting:
+    '1'
+ok
+Trying:
+    interpret("10 3 mod .")
+Expecting:
+    '1'
+ok
+Trying:
+    interpret("5 3 > .")
+Expecting:
+    '-1'
+ok
+Trying:
+    interpret("3 5 > .")
+Expecting:
+    '0'
+ok
+Trying:
+    interpret("5 5 == .")
+Expecting:
+    '-1'
+ok
+Trying:
+    interpret("-1 not .")
+Expecting:
+    '0'
+ok
+Trying:
+    interpret("0 not .")
+Expecting:
+    '-1'
+ok
+Trying:
+    interpret(": square dup * ; 5 square .")
+Expecting:
+    '25'
+ok
+Trying:
+    interpret(": inc 1 + ; 5 inc .")
+Expecting:
+    '6'
+ok
+Trying:
+    interpret(": abs dup 0 < if 0 swap - endif ; 2 abs .")
+Expecting:
+    '2'
+ok
+Trying:
+    interpret(": abs dup 0 < if 0 swap - endif ; -2 abs .")
+Expecting:
+    '2'
+ok
+Trying:
+    interpret(""" : faux dup rot * swap 1 - dup 2 < if drop else recurse endif ; 
+    : factorial dup 2 < if drop 1 else dup 1 - faux endif ;
+    4 factorial .""")
+Expecting:
+    '24'
+ok
+1 items passed all tests:
+  20 tests in test.txt
+20 tests in 1 items.
+20 passed and 0 failed.
+Test passed.
